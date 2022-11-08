@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  labels:
+    app: api
+spec:
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: api
+        image: ergikame/hyra-frontend:apiTest
+        ports:
+          - name: http
+            containerPort: 3000
+            protocol: TCP

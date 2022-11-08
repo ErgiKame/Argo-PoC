@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  namespace: qa
+spec:
+  template:
+    spec:
+      containers:
+      - name: webserver-simple
+        env:
+          - name: ENV
+            valueFrom:
+              secretKeyRef:
+                name: mysecrets
+                key: ENV
