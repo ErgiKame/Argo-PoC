@@ -7,6 +7,6 @@ resources:
 - ../../base
 
 patchesStrategicMerge:
-- deployment.yml
-- secrets.yml
+- deployment.yaml
+- secrets.yaml
 - ingress.yaml
