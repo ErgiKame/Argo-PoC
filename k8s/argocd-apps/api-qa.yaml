@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/ErgiKame/Argo-PoC'
-    path: ./k8s/simple-api-manifests/environments/qa
+    path: k8s/simple-api-manifests/environments/qa
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
