@@ -5,6 +5,6 @@ namespace: qa
 
 resources:
   - namespace.yaml
+  - cert.yaml
   - deployment.yaml
   - service.yaml
-  - cert.yaml
