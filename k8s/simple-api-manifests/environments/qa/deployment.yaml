@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api
+  namespace: qa
+  labels:
+    app: api
 spec:
   template:
     spec:
