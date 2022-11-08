@@ -5,8 +5,8 @@ namespace: qa
 
 resources:
 - ../../base
+- secrets.yaml
+- ingress.yaml
 
 patchesStrategicMerge:
 - deployment.yaml
-- secrets.yaml
-- ingress.yaml
