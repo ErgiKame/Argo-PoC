@@ -4,10 +4,8 @@ kind: Kustomization
 namespace: qa
 
 resources:
-- ../../base
 - secrets.yaml
 - ingress.yaml
 - cert.yaml
-
-patchesStrategicMerge:
+- service.yaml
 - deployment.yaml
