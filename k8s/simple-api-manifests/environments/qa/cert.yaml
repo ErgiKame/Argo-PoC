@@ -3,6 +3,8 @@ kind: Certificate
 metadata:
   name: api-cert
   namespace: qa
+  labels:
+    app.kubernetes.io/instance: api
 spec:
   dnsNames:
     - api.argotest.tk
