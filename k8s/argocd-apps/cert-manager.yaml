@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://charts.jetstack.io'
-    targetRevision: 1.9.1
-    chart: cert-manager
+    repoURL: 'https://github.com/ErgiKame/Argo-PoC'
+    path: k8s/cert-manager
+    targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: cert-manager
