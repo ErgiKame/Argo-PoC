@@ -1,3 +1,22 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: api
+#   namespace: qa
+#   labels:
+#     app: api
+# spec:
+#   template:
+#     spec:
+#       containers:
+#       - name: webserver-simple
+#         env:
+#           - name: ENV
+#             valueFrom:
+#               secretKeyRef:
+#                 name: mysecrets
+#                 key: ENV
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,13 +25,19 @@ metadata:
   labels:
     app: api
 spec:
+  selector:
+    matchLabels:
+      app: api
   template:
+    metadata:
+      labels:
+        app: api
     spec:
+      restartPolicy: Always
       containers:
-      - name: webserver-simple
-        env:
-          - name: ENV
-            valueFrom:
-              secretKeyRef:
-                name: mysecrets
-                key: ENV
+      - name: api
+        image: ergikame/hyra-frontend:poc
+        ports:
+          - name: http
+            containerPort: 3000
+            protocol: TCP
