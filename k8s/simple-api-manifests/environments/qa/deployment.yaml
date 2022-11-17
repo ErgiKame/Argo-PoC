@@ -43,5 +43,5 @@ spec:
             protocol: TCP
         env:
           - name: DOCKER_IMAGE_VERSION
-            value: 1234
+            value: "1234"
 
