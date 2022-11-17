@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - ergikame/hyra-frontend:0.0.2
