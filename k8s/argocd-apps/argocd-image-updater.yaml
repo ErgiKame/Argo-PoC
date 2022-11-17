@@ -1,21 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: api
+  name: argocd-image-updater
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: 'https://github.com/ErgiKame/Argo-PoC'
-    path: k8s/simple-api-manifests/environments/qa
+    path: k8s/argocd-image-updater
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: qa
+    namespace: argocd-image-updater
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
     syncOptions:
       - CreateNamespace=true
-    
