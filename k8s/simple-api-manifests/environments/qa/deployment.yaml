@@ -36,7 +36,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: api
-        image: ergikame/hyra-frontend:poc
+        image: ergikame/hyra-frontend:0.0.1
         ports:
           - name: http
             containerPort: 3000
