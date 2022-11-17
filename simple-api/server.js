@@ -17,4 +17,5 @@ const port = 3000;
 app.listen(port, function () {
 
    console.log(`Example app listening at port: ${port}`)
+   console.log(`Tesing purpose`)
 })
