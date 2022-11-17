@@ -4,7 +4,7 @@ var app = express();
 require('dotenv').config();
 
 app.get('/', function (req, res) {
-   const envVar = process.env.VAR;
+   const envVar = process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
    console.log(`envVar: ${envVar}`);
    res.json(envVar);
 })
@@ -17,5 +17,5 @@ const port = 3000;
 app.listen(port, function () {
 
    console.log(`Example app listening at port: ${port}`)
-   console.log(`Tesing purpose`)
+   console.log(`Tne`)
 })
