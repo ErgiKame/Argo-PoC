@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: git-creds
-type: Opaque
-data:
-  username: ZXJnaWthbWVAZ21haWwuY29tCg==
-  password: Z2hwX3V2aldhbWFEWnh2S2NzWnRmWEpqSnRxck9GYnJsbjBkSWQ2WAo=
