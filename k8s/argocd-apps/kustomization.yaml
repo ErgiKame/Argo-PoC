@@ -6,3 +6,4 @@ resources:
   - ingress-nginx.yaml
   - api-qa.yaml
   - argocd-image-updater.yaml
+  - kubeseal.yaml
