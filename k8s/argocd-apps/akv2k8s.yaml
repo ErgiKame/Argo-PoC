@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'http://charts.spvapi.no/spv-charts/akv2k8s'
+    repoURL: 'https://charts.spvapi.no'
     targetRevision: 2.2.2
     chart: akv2k8s
   destination:
