@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespaces
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/ErgiKame/Argo-PoC'
+    path: k8s/namespaces
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
