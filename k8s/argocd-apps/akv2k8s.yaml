@@ -6,13 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'http://charts.spvapi.no/spv-charts'
+    repoURL: 'http://charts.spvapi.no'
     targetRevision: 2.2.2
     helm:
       parameters:
         - name: admissionWebhooks.failurePolicy
           value: 'Ignore'
-    chart: akv2k8s
+    chart: spv-charts/akv2k8s
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: akv2k8s
