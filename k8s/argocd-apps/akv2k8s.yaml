@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: akv2k8s
+  name: akv2k8s-app
   namespace: akv2k8s
 spec:
   project: default
   source:
-    repoURL: 'https://charts.spvapi.no'
-    targetRevision: 1.3.1
-    chart: spv-charts/akv2k8s
+    repoURL: 'https://charts.spvapi.no/spv-charts'
+    targetRevision: 2.2.2
+    chart: akv2k8s
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: akv2k8s
