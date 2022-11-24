@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'http://charts.spvapi.no'
+    repoURL: 'http://charts.spvapi.no/spv-charts'
     targetRevision: 2.2.2
     helm:
       parameters:
