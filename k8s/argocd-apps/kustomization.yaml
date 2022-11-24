@@ -8,5 +8,3 @@ resources:
   - argocd-image-updater.yaml
   - kubeseal.yaml
   - akv2k8s.yaml
-  - namespaces.yaml
-  
