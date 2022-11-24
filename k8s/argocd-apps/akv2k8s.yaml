@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/ErgiKame/Argo-PoC'
-    path: k8s/akv2k8s
-    targetRevision: HEAD
+    repoURL: 'http://charts.spvapi.no'
+    targetRevision: 2.2.2
+    chart: akv2k8s
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: akv2k8s
