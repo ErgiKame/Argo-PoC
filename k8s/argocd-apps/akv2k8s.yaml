@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'http://charts.spvapi.no'
     targetRevision: 2.2.2
-    chart: akv2k8s
+    chart: spv-charts/akv2k8s
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: akv2k8s
