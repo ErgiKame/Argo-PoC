@@ -7,3 +7,4 @@ resources:
   - api.yaml
   - argocd-image-updater.yaml
   - kubeseal.yaml
+  - argo-rollouts.yaml
