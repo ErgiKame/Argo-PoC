@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/ErgiKame/Argo-PoC'
-    path: k8s/argo-rollouts
+    path: k8s/argo-rollouts/cluster-install
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
