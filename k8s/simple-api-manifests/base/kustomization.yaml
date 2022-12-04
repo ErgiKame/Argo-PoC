@@ -6,3 +6,4 @@ namespace: qa
 resources:
   - deployment.yaml
   - service.yaml
+  - service-canary.yaml
