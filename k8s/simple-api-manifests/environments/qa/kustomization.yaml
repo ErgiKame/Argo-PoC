@@ -9,6 +9,7 @@ resources:
 - ingress.yaml
 - cert.yaml
 - rollout.yaml
+- namespace.yaml
 
 patchesStrategicMerge:
 - deployment.yaml
