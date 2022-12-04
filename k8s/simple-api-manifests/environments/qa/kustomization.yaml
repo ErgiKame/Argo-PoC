@@ -8,7 +8,6 @@ resources:
 - sealed-secret.yaml
 - ingress.yaml
 - cert.yaml
-- namespace.yaml
 
 patchesStrategicMerge:
-- rollout.yaml
+- deployment.yaml
