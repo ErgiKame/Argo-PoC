@@ -6,4 +6,3 @@ namespace: qa
 resources:
   - deployment.yaml
   - service.yaml
-  - rollout.yaml
