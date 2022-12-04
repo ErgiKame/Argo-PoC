@@ -5,7 +5,7 @@ metadata:
   namespace: qa
 spec:
   selector:
-    app: api-service-canary
+    app: api
   ports:
     - name: https
       protocol: TCP
