@@ -15,13 +15,10 @@ spec:
     spec:
       containers:
       - name: api
-        image: ergikame/hyra-frontend:0.0.91
+        image: ergikame/hyra-frontend:0.0.7
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
-      env:
-        - name: DOCKER_IMAGE_VERSION
-          value: "12345"
   strategy:
     canary:
       canaryService: api-service-canary  # required
