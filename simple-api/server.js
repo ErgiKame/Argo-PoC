@@ -4,7 +4,7 @@ var app = express();
 require('dotenv').config();
 
 app.get('/', function (req, res) {
-   const envVar = 'Ergi 0.98 test ' + ' ' + process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
+   const envVar = 'Lou 0.99 test ' + ' ' + process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
    console.log(`envVar: ${envVar}`);
    res.json(envVar);
 })
