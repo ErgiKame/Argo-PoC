@@ -19,6 +19,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
+      env:
+        - name: DOCKER_IMAGE_VERSION
+          value: "12345"
   strategy:
     canary:
       canaryService: api-service-canary  # required
