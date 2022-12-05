@@ -4,6 +4,6 @@ kind: Kustomization
 namespace: qa
 
 resources:
-  - deployment.yaml
+  # - deployment.yaml
   - service.yaml
   - service-canary.yaml

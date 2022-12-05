@@ -4,8 +4,8 @@ var app = express();
 require('dotenv').config();
 
 app.get('/', function (req, res) {
-   const envVar = 'Bill and Prakash test ' + ' ' + process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
-   consoler: ${envVar}`);
+   const envVar = 'Bill test ' + ' ' + process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
+   console.log(`envVar: ${envVar}`);
    res.json(envVar);
 })
 

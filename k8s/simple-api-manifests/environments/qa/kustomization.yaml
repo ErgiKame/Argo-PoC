@@ -11,5 +11,5 @@ resources:
 - rollout.yaml
 - namespace.yaml
 
-patchesStrategicMerge:
-- deployment.yaml
+# patchesStrategicMerge:
+# - deployment.yaml
