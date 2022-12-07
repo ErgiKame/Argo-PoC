@@ -39,3 +39,8 @@ spec:
       - pause: {duration: 10s}
       - setWeight: 80
       - pause: {duration: 10s}
+      - analysis:
+          templates:
+          - templateName: random-fail
+          - templateName: always-pass
+            clusterScope: true
