@@ -55,7 +55,7 @@ metadata:
   name: always-pass
 spec:
   metrics:
-  - name: always-pass
+  - name: pass
     interval: 5s
     failureLimit: 1
     provider:
