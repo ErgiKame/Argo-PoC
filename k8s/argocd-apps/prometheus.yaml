@@ -11,16 +11,16 @@ spec:
     repoURL: 'https://prometheus-community.github.io/helm-charts'
     targetRevision: 19.0.1
     chart: prometheus
-    helm:
-      parameters:
-        - name: server.securityContext.runAsUser
-          value: "0"
-        - name: server.securityContext.runAsNonRoot
-          value: "false"
-        - name: server.securityContext.runAsGroup
-          value: "0"
-        - name: server.securityContext.fsGroup
-          value: "0"
+    # helm:
+    #   parameters:
+    #     - name: server.securityContext.runAsUser
+    #       value: "0"
+    #     - name: server.securityContext.runAsNonRoot
+    #       value: "false"
+    #     - name: server.securityContext.runAsGroup
+    #       value: "0"
+    #     - name: server.securityContext.fsGroup
+    #       value: "0"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: prometheus

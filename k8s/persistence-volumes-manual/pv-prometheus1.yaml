@@ -14,4 +14,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/etc/config"
+    path: "/joni"
