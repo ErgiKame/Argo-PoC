@@ -11,7 +11,7 @@ resources:
 - rollout.yaml
 - namespace.yaml
 - analysis-template-pass.yaml
-# - analysis-template-fail.yaml
+- analysis-template-fail.yaml
 
 # patchesStrategicMerge:
 # - deployment.yaml

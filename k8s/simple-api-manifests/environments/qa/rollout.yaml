@@ -36,6 +36,7 @@ spec:
       - analysis:
           templates:
           - templateName: pass
+          - templateName: random-fail
             clusterScope: false
           # args:
           # - name: api-service-canary
