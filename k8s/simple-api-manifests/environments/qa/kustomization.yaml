@@ -10,6 +10,7 @@ resources:
 - cert.yaml
 - rollout.yaml
 - namespace.yaml
+- analysis-templates.yaml
 
 # patchesStrategicMerge:
 # - deployment.yaml
