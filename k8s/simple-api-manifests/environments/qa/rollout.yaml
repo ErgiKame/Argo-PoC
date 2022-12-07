@@ -33,10 +33,13 @@ spec:
       steps:
       - setWeight: 20
       - pause: {}
-      # - analysis:
-      #     templates:
-      #     - templateName: always-pass
-      #       clusterScope: true
+      - analysis:
+          templates:
+          - templateName: always-pass
+            clusterScope: true
+          args:
+          - name: service-name
+            value: api-service-canary.qa.svc.cluster.local
       - setWeight: 40
       - pause: {duration: 20s}
       - setWeight: 60
