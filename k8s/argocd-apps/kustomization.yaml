@@ -8,4 +8,4 @@ resources:
   # - argocd-image-updater.yaml
   - kubeseal.yaml
   - argo-rollouts.yaml
-  # - prometheus.yaml
+  - prometheus.yaml
