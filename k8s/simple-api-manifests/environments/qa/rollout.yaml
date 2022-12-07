@@ -33,14 +33,13 @@ spec:
       steps:
       - setWeight: 20
       - pause: {}
+      - analysis:
+          templates:
+          - templateName: always-pass
+            clusterScope: true
       - setWeight: 40
       - pause: {duration: 20s}
       - setWeight: 60
       - pause: {duration: 10s}
       - setWeight: 80
       - pause: {duration: 10s}
-      - analysis:
-          templates:
-          # - templateName: random-fail
-          - templateName: always-pass
-            clusterScope: true
