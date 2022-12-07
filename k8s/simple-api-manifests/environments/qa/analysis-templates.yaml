@@ -52,10 +52,10 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: pass
+  name: always-pass
 spec:
   metrics:
-  - name: pass
+  - name: always-pass
     interval: 5s
     failureLimit: 1
     provider:
