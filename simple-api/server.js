@@ -4,7 +4,7 @@ var app = express();
 require('dotenv').config();
 
 app.get('/', function (req, res) {
-   const envVar = 'Xoni 0.992 test ' + ' ' + process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
+   const envVar = 'Xoni 0.993 test ' + ' ' + process.env.VAR + " " + process.env.DOCKER_IMAGE_VERSION;
    console.log(`envVar: ${envVar}`);
    res.json(envVar);
 })
