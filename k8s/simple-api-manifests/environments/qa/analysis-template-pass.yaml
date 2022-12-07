@@ -54,6 +54,8 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   name: always-pass
 spec:
+  args:
+    - name: api-service-canary
   metrics:
   - name: pass
     interval: 5s
