@@ -14,13 +14,13 @@ spec:
     helm:
       parameters:
         - name: server.securityContext.runAsUser
-          value: '0'
+          value: "0"
         - name: server.securityContext.runAsNonRoot
-          value: 'false'
+          value: "false"
         - name: server.securityContext.runAsGroup
-          value: '0'
+          value: "0"
         - name: server.securityContext.fsGroup
-          value: '0'
+          value: "0"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: prometheus
