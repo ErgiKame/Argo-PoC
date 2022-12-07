@@ -12,6 +12,6 @@ spec:
     namespace: prometheus
     name: prometheus-server
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   hostPath:
-    path: "/etc/config"
+    path: "/data"
