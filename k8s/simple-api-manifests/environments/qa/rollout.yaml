@@ -36,7 +36,7 @@ spec:
       - analysis:
           templates:
           - templateName: always-pass
-            clusterScope: true
+            clusterScope: false
           args:
           - name: service-name
             value: api-service-canary.qa.svc.cluster.local
