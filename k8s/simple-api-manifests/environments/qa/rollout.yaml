@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: ergikame/hyra-frontend:0.0.994
+        image: ergikame/hyra-frontend:0.0.993
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
@@ -33,11 +33,11 @@ spec:
       steps:
       - setWeight: 20
       - pause: {}
-      - analysis:
-          templates:
-          - templateName: pass
-          - templateName: random-fail
-            clusterScope: false
+      # - analysis:
+      #     templates:
+      #     - templateName: pass
+      #     - templateName: random-fail
+      #       clusterScope: false
           # args:
           # - name: api-service-canary
           #   value: api-service-canary.qa.svc.cluster.local
