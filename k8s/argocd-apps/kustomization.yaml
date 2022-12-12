@@ -9,3 +9,4 @@ resources:
   - kubeseal.yaml
   - argo-rollouts.yaml
   - prometheus.yaml
+  - grafana.yaml

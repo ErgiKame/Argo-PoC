@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-3"
+spec:
+  project: default
+  source:
+    repoURL: 'https://grafana.github.io/helm-charts'
+    targetRevision: 6.48.0
+    helm:
+      parameters:
+        - name: admissionWebhooks.failurePolicy
+          value: 'Ignore'
+        # - name: controller.metrics.port
+        #   value: 9090
+        # - name: controller.metrics.service.annotations
+        #   value: "{prometheus.io/scrape: 'true', prometheus.io/port: '9090'}"
+    chart: grafana
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: grafana
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
