@@ -10,6 +10,11 @@ spec:
       app: api
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "8080"
+        linkerd.io/inject: enabled 
       labels:
         app: api
     spec:
@@ -33,14 +38,14 @@ spec:
       steps:
       - setWeight: 20
       - pause: {}
-      # - analysis:
-      #     templates:
-      #     - templateName: pass
-      #     - templateName: random-fail
-      #       clusterScope: false
-          # args:
-          # - name: api-service-canary
-          #   value: api-service-canary.qa.svc.cluster.local
+      - analysis:
+          templates:
+          - templateName: success-rate
+          # - templateName: random-fail
+            clusterScope: false
+          args:
+          - name: service-name
+            value: api-service-canary.qa.svc.cluster.local
       - setWeight: 40
       - pause: {duration: 20s}
       - setWeight: 60
