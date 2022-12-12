@@ -15,4 +15,6 @@ spec:
     provider:
       prometheus:
         address: http://prometheus-server.prometheus.svc.cluster.local:80
-        query: sum (rate (container_cpu_usage_seconds_total{image!="docker.io/ergikame/hyra-frontend:0.0.994"}[1m])) by (pod_name)
+        query: sum(response_status{app="{{args.service-name}}",role="canary",status=~"2.*"})/sum(response_status{app="{{args.service-name}}",role="canary"})
+        
+        # sum (rate (container_cpu_usage_seconds_total{image!="docker.io/ergikame/hyra-frontend:0.0.994"}[1m])) by (pod_name)
