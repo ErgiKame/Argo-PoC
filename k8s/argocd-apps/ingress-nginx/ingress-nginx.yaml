@@ -8,11 +8,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://kubernetes.github.io/ingress-nginx'
-    targetRevision: 4.0.13
+    repoURL: 'https://github.com/ErgiKame/Argo-PoC'
+    # targetRevision: 4.0.13
     helm:
       valueFiles:
-      - k8s/argocd-apps/ingress-nginx/values.yaml
+      - values.yaml
+    path: k8s/ingress-nginx
       # parameters:
       #   - name: admissionWebhooks.failurePolicy
       #     value: 'Ignore'
