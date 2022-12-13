@@ -11,9 +11,9 @@ spec:
     repoURL: 'https://kubernetes.github.io/ingress-nginx'
     targetRevision: 4.3.0
     helm:
-      values:
+      valueFiles:
 # {{ .Files.Get "vlerat.yaml" | indent 8 }}
-        k8s/argocd-apps/ingress-nginx/vlerat.yaml
+      - k8s/argocd-apps/ingress-nginx/vlerat.yaml
       # parameters:
       #   - name: admissionWebhooks.failurePolicy
       #     value: 'Ignore'
