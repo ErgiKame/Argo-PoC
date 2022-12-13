@@ -11,18 +11,16 @@ spec:
     repoURL: 'https://kubernetes.github.io/ingress-nginx'
     targetRevision: 4.3.0
     helm:
-      valueFiles:
-# {{ .Files.Get "vlerat.yaml" | indent 8 }}
-      - k8s/argocd-apps/ingress-nginx/vlerat.yaml
-      # parameters:
-      #   - name: admissionWebhooks.failurePolicy
-      #     value: 'Ignore'
-      #   - name: controller.metrics.port
-      #     value: 9090
-      #   - name: controller.metrics.service.annotations.prometheus.io/scrape
-      #     value: "true"
-      #   - name: controller.metrics.service.annotations.prometheus.io/port
-      #     value: "9090"
+      parameters:
+      # - k8s/argocd-apps/ingress-nginx/vlerat.yaml
+        - name: admissionWebhooks.failurePolicy
+          value: 'Ignore'
+        - name: controller.metrics.port
+          value: 10254
+        - name: controller.metrics.service.annotations
+          value: "prometheus.io/scrape: true"
+        # - name: controller.metrics.service.annotations
+        #   value: "prometheus.io/port: 10254"
     chart: ingress-nginx
   destination:
     server: 'https://kubernetes.default.svc'
