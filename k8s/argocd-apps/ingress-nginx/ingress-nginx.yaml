@@ -13,7 +13,7 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-      path: .
+    path: .
       # parameters:
       #   - name: admissionWebhooks.failurePolicy
       #     value: 'Ignore'
