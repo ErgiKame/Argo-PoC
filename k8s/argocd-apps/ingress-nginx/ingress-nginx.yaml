@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/ErgiKame/Argo-PoC'
-    # targetRevision: 4.0.13
+    targetRevision: 4.3.0
     helm:
       valueFiles:
       - values.yaml
