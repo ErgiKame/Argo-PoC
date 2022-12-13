@@ -16,8 +16,10 @@ spec:
           value: 'Ignore'
         - name: controller.metrics.port
           value: 9090
-        - name: controller.metrics.service.annotations
-          value: prometheus.io/scrape: "true", prometheus.io/port: "9090"
+        - name: controller.metrics.service.annotations.prometheus.io/scrape
+          value: "true"
+        - name: controller.metrics.service.annotations.prometheus.io/port
+          value: "9090"
     chart: ingress-nginx
   destination:
     server: 'https://kubernetes.default.svc'
