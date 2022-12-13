@@ -13,7 +13,7 @@ spec:
     helm:
       values:
 # {{ .Files.Get "vlerat.yaml" | indent 8 }}
-      - k8s/argocd-apps/ingress-nginx/values.yaml
+      - k8s/argocd-apps/ingress-nginx/vlerat.yaml
       # parameters:
       #   - name: admissionWebhooks.failurePolicy
       #     value: 'Ignore'
