@@ -16,7 +16,7 @@ spec:
         - name: admissionWebhooks.failurePolicy
           value: 'Ignore'
         - name: controller.metrics.port
-          value: 10254
+          value: "10254"
         - name: controller.metrics.enabled
           value: "true"
         # - name: controller.metrics.service.annotations
