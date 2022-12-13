@@ -12,7 +12,7 @@ spec:
     targetRevision: 4.0.13
     helm:
       valueFiles:
-      - k8s/argocd-apps/ingress-nginxvalues.yaml
+      - k8s/argocd-apps/ingress-nginx/values.yaml
       # parameters:
       #   - name: admissionWebhooks.failurePolicy
       #     value: 'Ignore'
