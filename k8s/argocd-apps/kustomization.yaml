@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - cert-manager.yaml
-  - ingress-nginx.yaml
+  - ingress-nginx/ingress-nginx.yaml
   - api.yaml
   # - argocd-image-updater.yaml
   - kubeseal.yaml

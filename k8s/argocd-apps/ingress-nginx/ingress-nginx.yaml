@@ -11,15 +11,18 @@ spec:
     repoURL: 'https://kubernetes.github.io/ingress-nginx'
     targetRevision: 4.0.13
     helm:
-      parameters:
-        - name: admissionWebhooks.failurePolicy
-          value: 'Ignore'
-        - name: controller.metrics.port
-          value: 9090
-        - name: controller.metrics.service.annotations.prometheus.io/scrape
-          value: "true"
-        - name: controller.metrics.service.annotations.prometheus.io/port
-          value: "9090"
+      valueFiles:
+      - values.yaml
+      path: .
+      # parameters:
+      #   - name: admissionWebhooks.failurePolicy
+      #     value: 'Ignore'
+      #   - name: controller.metrics.port
+      #     value: 9090
+      #   - name: controller.metrics.service.annotations.prometheus.io/scrape
+      #     value: "true"
+      #   - name: controller.metrics.service.annotations.prometheus.io/port
+      #     value: "9090"
     chart: ingress-nginx
   destination:
     server: 'https://kubernetes.default.svc'
