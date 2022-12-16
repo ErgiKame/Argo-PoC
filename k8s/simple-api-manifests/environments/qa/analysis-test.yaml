@@ -11,11 +11,12 @@ spec:
     count: 2
     # NOTE: prometheus queries return results in the form of a vector.
     # So it is common to access the index 0 of the returned array to obtain the value
-    successCondition: result[0] >= 0
+    successCondition: result[14] <= 2
     provider:
       prometheus:
         address: http://prometheus-server.prometheus.svc.cluster.local:80
-        query: sum(kube_pod_status_ready{condition="false"})
+        query: nginx_ingress_controller_requests {service="api-service", status="404"}[5m]
+        # query: sum(kube_pod_status_ready{condition="false"})
         
         # sum(response_status{app="{{args.service-name}}",role="canary",status=~"2.*"})/sum(response_status{app="{{args.service-name}}",role="canary"})
         
