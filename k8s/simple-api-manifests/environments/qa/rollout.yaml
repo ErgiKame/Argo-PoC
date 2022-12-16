@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: ergikame/hyra-frontend:0.0.994
+        image: ergikame/hyra-frontend:0.0.993
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
