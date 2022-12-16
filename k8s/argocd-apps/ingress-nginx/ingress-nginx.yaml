@@ -19,8 +19,8 @@ spec:
           value: "true"
         - name: controller.metrics.service.annotations{}
           value: "prometheus.io/scrape: true"
-        - name: controller.metrics.service.annotations
-          value: "prometheus\.io/port: 10254"
+        - name: controller.metrics.service.annotations[]
+          value: "prometheus.io/port: 10254"
     chart: ingress-nginx
   destination:
     server: 'https://kubernetes.default.svc'
