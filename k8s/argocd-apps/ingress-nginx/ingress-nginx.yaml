@@ -17,8 +17,8 @@ spec:
           value: 'Ignore'
         - name: controller.metrics.enabled
           value: "true"
-        - name: controller.metrics.service.annotations
-          value: "['prometheus.io/scrape: true', 'prometheus.io/port: 10254']"
+        - name: controller.metrics.service.annotations{}
+          value: "prometheus.io/scrape: true"
         # - name: controller.metrics.service.annotations
         #   value: "prometheus.io/port: 10254"
     chart: ingress-nginx
