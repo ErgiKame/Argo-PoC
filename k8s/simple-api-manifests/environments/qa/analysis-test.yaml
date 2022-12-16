@@ -15,7 +15,7 @@ spec:
     provider:
       prometheus:
         address: http://prometheus-server.prometheus.svc.cluster.local:80
-        query: sum(kube_pod_status_ready{condition="false"})
+        query: nginx_ingress_controller_requests {service="api-service", status="500"}
         # nginx_ingress_controller_requests {service="api-service-canary", status="404"}[1m]
         # query: sum(kube_pod_status_ready{condition="false"})
         
