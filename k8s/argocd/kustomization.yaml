@@ -8,3 +8,6 @@ resources:
   - argocd.yaml
   - cert.yaml
   - ingress.yaml
+
+patchesStrategicMerge:
+  - argo-cm.yaml
